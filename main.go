@@ -24,8 +24,8 @@ import (
 	"github.com/golang/glog"
 	"github.com/google/go-microservice-helpers/server"
 
-	pb "github.com/google/lvmd/proto"
-	"github.com/google/lvmd/server"
+	pb "github.com/zdnscloud/lvmd-server/proto"
+	"github.com/zdnscloud/lvmd-server/server"
 )
 
 func main() {

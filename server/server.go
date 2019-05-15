@@ -19,12 +19,12 @@ limitations under the License.
 package server
 
 import (
-	"github.com/google/lvmd/commands"
+	"github.com/zdnscloud/lvmd-server/commands"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	pb "github.com/google/lvmd/proto"
+	pb "github.com/zdnscloud/lvmd-server/proto"
 )
 
 type Server struct{}

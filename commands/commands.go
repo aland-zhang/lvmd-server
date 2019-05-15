@@ -26,7 +26,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/google/lvmd/parser"
+	"github.com/zdnscloud/lvmd-server/parser"
 )
 
 // ListLV lists lvm volumes

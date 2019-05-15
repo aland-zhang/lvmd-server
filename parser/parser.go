@@ -24,7 +24,7 @@ import (
 	"strconv"
 	"strings"
 
-	pb "github.com/google/lvmd/proto"
+	pb "github.com/zdnscloud/lvmd-server/proto"
 )
 
 const separator = "<:SEP:>"
