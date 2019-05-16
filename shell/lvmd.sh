@@ -31,5 +31,9 @@ fi
 netstat -nutlp  | grep 1736 | grep lvmd
 if [ $? -eq 0 ];then
 	kill -9 `netstat -nutlp  | grep 1736 | grep lvmd|awk -F " |/"  '{print $(NF-1)}'`
+	sleep 1
+	kill -9 `netstat -nutlp  | grep 1736 | grep lvmd|awk -F " |/"  '{print $(NF-1)}'`
+	sleep 1
+	kill -9 `netstat -nutlp  | grep 1736 | grep lvmd|awk -F " |/"  '{print $(NF-1)}'`
 fi
 /lvmd -v 5 -listen 0.0.0.0:1736 -logtostderr
