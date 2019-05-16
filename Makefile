@@ -1,11 +1,13 @@
-all: grpc
+REGISTRY_NAME = zdnscloud
+IMAGE_Name = lvmd
+IMAGE_VERSION = v0.5
 
-grpc: proto/lvm.pb.go
+.PHONY: all container
 
 proto/lvm.pb.go: proto/lvm.proto
 	cd proto && protoc -I/usr/local/include -I. --go_out=plugins=grpc:. lvm.proto
 
-clean:
-	rm -f proto/lvm.pb.go
+all: container
 
-.PHONY: all clean
+container: 
+	docker build -t $(REGISTRY_NAME)/$(IMAGE_Name):$(IMAGE_VERSION) ./ --no-cache
