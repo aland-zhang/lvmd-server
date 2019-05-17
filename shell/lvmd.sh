@@ -1,4 +1,14 @@
 #!/bin/sh
+blocks=`/getglocks`
+if [ -z "${blocks}" ];then
+	echo "No blocks to used"
+	sleep 86400
+else
+	echo "Found blocks for lvmd ${blocks}"
+fi
+
+DEVICE=`echo ${blocks}|tr "," " "`
+
 LVM_CONF=/etc/lvm/lvm.conf
 if [ ! -f ${LVM_CONF}.bak ];then
         cp -a ${LVM_CONF} ${LVM_CONF}.bak
