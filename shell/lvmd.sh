@@ -33,7 +33,7 @@ done
 
 vgs |grep -E "${VG_NAME}" -w -q
 if [ $? -ne 0 ];then
-	vgcreate ${VG_NAME} ${DEVICE}
+	vgcreate ${VG_NAME} ${DEVICE} -y
 else
 	echo "Volume group ${VG_NAME} already exists"
 fi
